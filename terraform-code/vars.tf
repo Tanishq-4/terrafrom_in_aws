@@ -1,19 +1,81 @@
-variable "region" {
-  #default = "eu-central-1" # Frankfurt
-  #default = "us-east-2" # Ohio
-  #default = "us-west-2" #Oregon
-  #default = "ap-southeast-2"
-  #default = "us-east-2"
-  #default = "eu-west-1"
-  default = "us-east-1" # Virginia
-  description = "the region where you want deploy the solution"
+variable "sns_topic_name" {
+  description = "Sns topic name"
+  type        = string
 }
 
-variable "prefix" {
-    default = "pepapp1"
-    description = "The prefix used to build the elements"
+variable "sns_subsciption_protocol" {
+  description = "Sns subscription protocol"
+  type        = string
 }
 
-variable "profile" {
-  default = "default"
+variable "sns_subsciption_endpoint_1" {
+  description = "sns subsciption endpoint"
+  type        = string
 }
+
+variable "sns_subsciption_endpoint_2" {
+  description = "sns subsciption endpoint"
+  type        = string
+}
+
+variable "alarm_name" {
+  description = "alarm name"
+  type        = string
+}
+
+variable "alarm_description" {
+  description = "alarm_description"
+  type        = string
+}
+
+variable "comparison_operator" {
+  description = "comparison operator"
+  type        = string
+}
+
+variable "datapoints_to_alarm"{
+    description = "datapoints to alarm "
+    type = number
+}
+
+variable "evaluation_periods"{
+    description = "evaluation periods"
+    type = number
+}
+
+variable "threshold"{
+    description = "threshold"
+    type = number
+}
+
+variable "period"{
+    description = "period"
+    type = number
+}
+
+variable "unit"{
+    description = "unit"
+    type = string
+}
+
+variable "namespace"{
+    description = "namespace"
+    type = string
+}
+
+variable "metric_name"{
+    description = "metric_name"
+    type = string
+}
+
+variable "statistic"{
+    description = "statistic"
+    type = string
+}
+
+variable "FunctionName"{
+    description = "Lambda Function Name"
+    type = string
+}
+
+
